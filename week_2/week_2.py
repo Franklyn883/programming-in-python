@@ -101,25 +101,92 @@
 ##prints keys and value
 #for key, value in sample_dict.items():
 #    print(str(key) +":" + value)
+#
+###ARGS and KWARGS(keyword ARGS)
+#def sum(a,b):
+#    return a+b
+##print(sum(3,5,4))#trying to pass more arguments causes errors, with args will can pass multiple amount of args
+#def sum_all(*args):
+#    sum = 0
+#    for x in args:
+#        sum +=x
+#    return sum
+#print(sum_all(2,3))
+#
+###KWARGS is similar to ARGS but allows key:values pairs
+#def sum_kwargs(**Kwargs):
+#    sum = 0
+#    for key, value in Kwargs.items():
+#        sum +=value
+#    return sum
+#print(sum_kwargs(rice=12,beans=12,house_rent=24))
+#
+##choosing a data structure
+#employee_list = [{"id": 12345, "name": "John", "department": "Kitchen"}, {"id": 12458, "name": "Paul", "department": "House Floor"}]
+#
+#def get_employee(id): 
+#    for employee in employee_list:
+#        if employee['id'] == id:
+#            return employee
+#
+#print(get_employee(12458))
+#employee_dict = {
+#    12345: {
+#        "id": "12345",
+#        "name": "John", 
+#        "department": "Kitchen"    
+#    },
+#    12458: {
+#        "id": "12458",
+#        "name": "Paul", 
+#        "department": "House Floor"    
+#    }
+#}
+#print()
+#def get_employee_detail(id):
+#    return employee_dict[id]
+#print(get_employee_detail(12458))
 
-##ARGS and KWARGS(keyword ARGS)
-def sum(a,b):
-    return a+b
-#print(sum(3,5,4))#trying to pass more arguments causes errors, with args will can pass multiple amount of args
-def sum_all(*args):
-    sum = 0
-    for x in args:
-        sum +=x
-    return sum
-print(sum_all(2,3))
 
-##KWARGS is similar to ARGS but allows key:values pairs
-def sum_kwargs(**Kwargs):
-    sum = 0
-    for key, value in Kwargs.items():
-        sum +=value
-    return sum
-print(sum_kwargs(rice=12,beans=12,house_rent=24))
+menu = {
+    1: {"name": 'espresso',
+        "price": 1.99},
+    2: {"name": 'coffee', 
+        "price": 2.50},
+    3: {"name": 'cake', 
+        "price": 2.79},
+    4: {"name": 'soup', 
+        "price": 4.50},
+    5: {"name": 'sandwich',
+        "price": 4.99}
+}
+order_list = [{'name':"coke", "price":2.5}, {'name':"soup", "price":4.50},{'name':"beverages", "price":5.50}]
+
+def calculate_subtotal(order):
+    items_sum = 0
+    for items in order:
+        items_sum += items["price"]
+    return round(items_sum,2)
+print(calculate_subtotal(order_list))
+def calculate_tax(subtotal):
+    
+    tax = (15*subtotal)/100
+    return round(tax,2)
+subtotal = calculate_subtotal(order_list)
+print(calculate_tax(subtotal))
+
+#Implement summarize_order() which returns a list of the names of the items
+#that the customer ordered and the total amount (including tax) that they have to pay.
+#The orders should show the name and price.
+def summarize_order(order):
+    total =calculate_tax(subtotal) + calculate_subtotal(order)
+    name = []
+    for item in order:
+        name.append(item['name'])
+    print('you bought:'+  str(name) +"your total bill is:" + str(total))
+    return round(total,2), name
+print(summarize_order(order_list))
+   
 
 
 
