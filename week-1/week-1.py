@@ -48,9 +48,62 @@
 
 #using the match statement: the match statement is equivalent to javascript switch statement.
 
-httpStatus = 200
-if httpStatus == 200 or httpStatus == 201:
-    print('Success')
-elif httpStatus == 400:
-    print('Bad request')
-elif
+#httpStatus = 200
+#if httpStatus == 200 or httpStatus == 201:
+#    print('Success')
+#elif httpStatus == 400:
+#    print('Bad request')
+#elif httpStatus == 404:
+#    print('Not Found')
+#elif httpStatus == 500 or httpStatus == 501:
+#    print('Server Error')
+#else:
+#    print('Unknown')    
+
+##Using the match method for the conditional control flow
+#match httpStatus:
+#    case 200 | 201 :
+#        print('Success')
+#    case 400:
+#        print('Bad request')
+#    case 404:
+#        print('Not Found')
+#    case 500 | 501:
+#        print('Server Error')
+#    case _:
+#        print('Unknown')
+
+## Looping construct the For Loop
+
+#favorites = ['creme brulee', 'Apple pie', 'Churros', "chocolate", 'pancake']
+#for i in favorites:
+ #   print('i like :', i)
+
+#using the while loop: first we initiate a counter, the provide the condition of the loop, and update the counter
+# after each iteraction until the condition is met.
+#count = 0
+#while count < len(favorites):
+#    print('I like this dessert: ', favorites[count]) 
+#    count += 1
+
+#Controlling flow with if/else statement in a loop. using break, continue and pass
+##favorites = ['creme brulee', 'Apple pie', 'Churros', "chocolate", 'pancake', 15]
+##for dessert in favorites:
+##    if dessert != str(dessert):
+##        print('my favorite dessert is:', dessert)
+##        pass
+##else:
+ #       print('sorry dessert not found')
+
+#Nested Loop a loop wetin a loop
+#outer loop
+#for i in range(10):
+#    for y in range(10):
+#        print(0, end=" ")
+#    print()    
+# Function is defined using def
+
+
+def calculate_tax(bill, tax_rate):
+    return round((bill * tax_rate) / 100,2)
+print('Your tax is: ', calculate_tax(112.34,15))
