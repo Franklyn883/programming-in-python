@@ -145,48 +145,78 @@
 #print()
 #def get_employee_detail(id):
 #    return employee_dict[id]
-#print(get_employee_detail(12458))
+##print(get_employee_detail(12458))
+#
+#
+#menu = {
+#    1: {"name": 'espresso',
+#        "price": 1.99},
+#    2: {"name": 'coffee', 
+#        "price": 2.50},
+#    3: {"name": 'cake', 
+#        "price": 2.79},
+#    4: {"name": 'soup', 
+#        "price": 4.50},
+#    5: {"name": 'sandwich',
+#        "price": 4.99}
+#}
+#order_list = [{'name':"coke", "price":2.5}, {'name':"soup", "price":4.50},{'name':"beverages", "price":5.50}]
+#
+#def calculate_subtotal(order):
+#    items_sum = 0
+#    for items in order:
+#        items_sum += items["price"]
+#    return round(items_sum,2)
+#print(calculate_subtotal(order_list))
+#def calculate_tax(subtotal):
+#    
+#    tax = (15*subtotal)/100
+#    return round(tax,2)
+#subtotal = calculate_subtotal(order_list)
+#print(calculate_tax(subtotal))
+#
+##Implement summarize_order() which returns a list of the names of the items
+##that the customer ordered and the total amount (including tax) that they have to pay.
+##The orders should show the name and price.
+#def summarize_order(order):
+#    total =calculate_tax(subtotal) + calculate_subtotal(order)
+#    name = []
+#    for item in order:
+#        name.append(item['name'])
+#    print('you bought:'+  str(name) +"your total bill is:" + str(total))
+#    return round(total,2), name
+#print(summarize_order(order_list))
 
+## File handling in python
+#opening a file and reading it in python
+file = open('week_2/text.txt', mode="r")
+data = file.readline()#this is used to read a single line
+print(data)
+file.close()#to close the file
+print(data)
+#another way is with the "with" function. it closed the file automatically
+with open("week_2/text.txt", mode="r") as file:
+    data = file.readline()
+    print(data)
 
-menu = {
-    1: {"name": 'espresso',
-        "price": 1.99},
-    2: {"name": 'coffee', 
-        "price": 2.50},
-    3: {"name": 'cake', 
-        "price": 2.79},
-    4: {"name": 'soup', 
-        "price": 4.50},
-    5: {"name": 'sandwich',
-        "price": 4.99}
-}
-order_list = [{'name':"coke", "price":2.5}, {'name':"soup", "price":4.50},{'name':"beverages", "price":5.50}]
+##creating a file 
+try:
+    with open('sample/newfile.txt', 'a') as file:
+        file.writelines(['\nThis is a new file2',"\nThis is another line"])
+except FileNotFoundError as e:
+    print("ERROR",e)
 
-def calculate_subtotal(order):
-    items_sum = 0
-    for items in order:
-        items_sum += items["price"]
-    return round(items_sum,2)
-print(calculate_subtotal(order_list))
-def calculate_tax(subtotal):
-    
-    tax = (15*subtotal)/100
-    return round(tax,2)
-subtotal = calculate_subtotal(order_list)
-print(calculate_tax(subtotal))
+##writng a programming to randomly generate names for a dog
 
-#Implement summarize_order() which returns a list of the names of the items
-#that the customer ordered and the total amount (including tax) that they have to pay.
-#The orders should show the name and price.
-def summarize_order(order):
-    total =calculate_tax(subtotal) + calculate_subtotal(order)
-    name = []
-    for item in order:
-        name.append(item['name'])
-    print('you bought:'+  str(name) +"your total bill is:" + str(total))
-    return round(total,2), name
-print(summarize_order(order_list))
+with open('pet_names.txt', 'w') as file:
+    file.writelines(["Ace","\nAtlas","\nBailey","\nBear","\nBlaze","\nBoomer","\nBuddy" \
+                     "\nCoco", "\nCooper", "\nDuke"])
    
-
-
-
+with open('pet_names.txt', 'r') as file:
+   data = file.read()
+   #to turn the data into a list
+   data_list = data.split('\n')
+   print(data_list)
+   #now we can import a random math method to randomly generate a pet name for us.
+   import random
+   print(random.choice(data_list))
