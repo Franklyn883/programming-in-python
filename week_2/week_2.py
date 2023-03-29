@@ -189,34 +189,88 @@
 
 ## File handling in python
 #opening a file and reading it in python
-file = open('week_2/text.txt', mode="r")
-data = file.readline()#this is used to read a single line
-print(data)
-file.close()#to close the file
-print(data)
-#another way is with the "with" function. it closed the file automatically
-with open("week_2/text.txt", mode="r") as file:
-    data = file.readline()
-    print(data)
+#file = open('week_2/text.txt', mode="r")
+#data = file.readline()#this is used to read a single line
+#print(data)
+#file.close()#to close the file
+#print(data)
+##another way is with the "with" function. it closed the file automatically
+#with open("week_2/text.txt", mode="r") as file:
+#    data = file.readline()
+#    print(data)
+#
+###creating a file 
+#try:
+#    with open('sample/newfile.txt', 'a') as file:
+#        file.writelines(['\nThis is a new file2',"\nThis is another line"])
+#except FileNotFoundError as e:
+#    print("ERROR",e)
+#
+###writng a programming to randomly generate names for a dog
+#
+#with open('pet_names.txt', 'w') as file:
+#    file.writelines(["Ace","\nAtlas","\nBailey","\nBear","\nBlaze","\nBoomer","\nBuddy" \
+#                     "\nCoco", "\nCooper", "\nDuke"])
+#   
+#with open('pet_names.txt', 'r') as file:
+#   data = file.read()
+#   #to turn the data into a list
+#   data_list = data.split('\n')
+#   print(data_list)
+#   #now we can import a random math method to randomly generate a pet name for us.
+#   import random
+#   print(random.choice(data_list))
 
-##creating a file 
-try:
-    with open('sample/newfile.txt', 'a') as file:
-        file.writelines(['\nThis is a new file2',"\nThis is another line"])
-except FileNotFoundError as e:
-    print("ERROR",e)
+def read_file_into_list(file_name):
+    """ Reads in a file and stores each line as an element in a list
 
-##writng a programming to randomly generate names for a dog
+    [IMPLEMENT ME]
+        1. Open the given file
+        2. Read the file line by line and append each line to a list
+        3. Return the list
 
-with open('pet_names.txt', 'w') as file:
-    file.writelines(["Ace","\nAtlas","\nBailey","\nBear","\nBlaze","\nBoomer","\nBuddy" \
-                     "\nCoco", "\nCooper", "\nDuke"])
+    Args:
+        file_name: the name of the file to be read
+
+    Returns:
+        list: a list where each element is a line in the file.
+    """
+    ### WRITE SOLUTION HERE
+    with open(file_name, 'r') as file:
+        file_content = file.readlines()
+        file_list = []
+        for x in file_content:
+            file_list.append(x)
+        print(file_list)
+        return file_list
+        
+       
+    raise NotImplementedError()
+read_file_into_list('week_2/text.txt')
+
+def write_first_line_to_file(file_contents, output_filename):
+    """ Writes the first line of a string to a file.
+
+    [IMPLEMENT ME]
+        1. Get the first line of file_contents
+        2. Use the File write() function to write the first line into a file
+           with the name from output_filename
+
+        We determine the first line to be everything in a string before the
+        first newline ('\n') character.
+
+    Args:
+        file_contents: string to be split and written into output file
+        output_filename: the name of the file to be written to
+    """
+    ### WRITE SOLUTION HERE
+    file = open(file_contents, 'r')
+    first_line = file.readlines()
+    #to write a new file
+    with open(output_filename, 'w') as file:
+        file.write(first_line)
+    with open(output_filename, 'r') as file:
+     print(file.read())
+    
    
-with open('pet_names.txt', 'r') as file:
-   data = file.read()
-   #to turn the data into a list
-   data_list = data.split('\n')
-   print(data_list)
-   #now we can import a random math method to randomly generate a pet name for us.
-   import random
-   print(random.choice(data_list))
+write_first_line_to_file("week_2/text.txt", "newtext.txt")
