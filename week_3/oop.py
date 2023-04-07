@@ -161,8 +161,8 @@
 # print(jerry.leave_request(10))
 # #output: Jerry .K Requesting for 10days of leave
 
-# #-----------------------INHERITANCE AND MULTIPLE INHERITANCE
-
+# #-----------------------INHERITANCE
+#------------simple inheritance: the inheritance is just in a single level
 # class A: #class A is the parent class
 #     pass
 # class B(A):#class B is the child class and inherits the attributes and behaviors of class A
@@ -239,9 +239,10 @@ iii.multi-level inheritance: this is when inheritance happens in multiple levels
 that subclass inheriting from other parents. The chain can go on and on
 iv.Hierarchical inheritance: this handles how several subclass inherit from one and other.
 There is a fifth type called HYBRID-INHERITANCE which combines the characters from the other types of inheritance.
-MRO: It determines the order a given method or attribute is passed through in a search ot the hierarchy of classes for  it's resolution. The order of resolution is 
-called LINEARIZATION OF A CLASS. it follows a simple logic bottom to top, left to right. The older version of python uses a 
-DEPTH-FIRST SEARCH ALGORITHM(DFS) while recent version use C3 LINEARIZATION ALGORITHM.
+MRO: It determines the order a given method or attribute is passed through in a search ot the hierarchy of classes for 
+ it's resolution. The order of resolution is 
+called LINEARIZATION OF A CLASS. it follows a simple logic bottom to top, left to right. The older version of python
+uses a DEPTH-FIRST SEARCH ALGORITHM(DFS) while recent version use C3 LINEARIZATION ALGORITHM.
 MRO() FUNTIONS:There are two functions to check the inheritance of class :
 mro(): shows the inheritance graph of the classes
 help(): Provides more details with the mro() information at the top

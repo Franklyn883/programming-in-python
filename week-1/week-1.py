@@ -1,4 +1,4 @@
-##conditional if and else statememt, in python
+##conditional if and else statement, in python
 #billTotal = 220
 #discount1 = 10
 #discount2 = 20
@@ -104,6 +104,15 @@
 # Function is defined using def
 
 
-def calculate_tax(bill, tax_rate):
-    return round((bill * tax_rate) / 100,2)
-print('Your tax is: ', calculate_tax(112.34,15))
+# def calculate_tax(bill, tax_rate):
+#     return round((bill * tax_rate) / 100,2)
+# print('Your tax is: ', calculate_tax(112.34,15))
+favorites = ['Creme Brulee', 'Apple Pie', "chuno", 15]
+count = 0
+while count < len(favorites):
+    if favorites[count] == 'Apple Pie':
+        print('My favorite dessert is: ', favorites[count])
+        break
+    else:
+        print('Dessert not in the list')
+    count += 1
