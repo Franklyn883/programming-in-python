@@ -1,32 +1,41 @@
-##conditional if and else statement, in python
-#billTotal = 220
-#discount1 = 10
-#discount2 = 20
-# 
-#if billTotal > 100 and billTotal < 200:
+#conditional if and else statement, in python
+# billTotal = 220
+# discount1 = 10
+# discount2 = 20
+
+# if billTotal > 100 and billTotal < 200:
 #    print('bill is greater than 100')
 #    billTotal = billTotal - discount1
 #    print('bill Total is: ' + str(billTotal))
-#elif billTotal > 200:
+# elif billTotal > 200:
 #    print('bill is greater than 200')
 #    billTotal = billTotal - discount2
 #    print('bill Total is: ' + str(billTotal)) 
-#  
-#else:
-#    print('bill is not upt to 100')
+ 
+# else:
+#    print('bill is not up to 100')
 #    print('bill Total is: ' + str(billTotal))
-#
 
+# def calculate_bill(bill):
+#     if bill > 100 & bill < 200:
+#         discount = 10
+#         print("bill is greater than 100")
+#         totalBill = bill - discount
+        
+#         return print("Your total bill is " + str(totalBill))
+        
+    
+# calculate_bill(110)
 #Light is currently off
-#current = False
-#
-#if current:
-#    current = False
-#    print('Turning light off')
-#
-#if not current:
-#    current = True
-#    print('Turning light on') 
+current = True
+
+if current:
+   current = False
+   print('Turning light off')
+
+if not current:
+   current = True
+   print('Turning light on') 
 
 
 # A simple programme to check if a customer is in a loyalty programme. if they are in a loyalty programme and spend
@@ -107,12 +116,12 @@
 # def calculate_tax(bill, tax_rate):
 #     return round((bill * tax_rate) / 100,2)
 # print('Your tax is: ', calculate_tax(112.34,15))
-favorites = ['Creme Brulee', 'Apple Pie', "chuno", 15]
-count = 0
-while count < len(favorites):
-    if favorites[count] == 'Apple Pie':
-        print('My favorite dessert is: ', favorites[count])
-        break
-    else:
-        print('Dessert not in the list')
-    count += 1
+# favorites = ['Creme Brulee', 'Apple Pie', "chuno", 15]
+# count = 0
+# while count < len(favorites):
+#     if favorites[count] == 'Apple Pie':
+#         print('My favorite dessert is: ', favorites[count])
+#         break
+#     else:
+#         print('Dessert not in the list')
+#     count += 1

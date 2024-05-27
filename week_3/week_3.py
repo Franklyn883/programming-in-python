@@ -32,28 +32,28 @@
 # #comprehension is a way of creating a new sequences from an existing sequence.
 #the syntax goes like this [ <expression> for x in <sequence> if <condition>] 
 
-# #-------------------------LIST COMPREHENSION
-# #Ex1: List comprehension: updating the same list
-# data = [2,3,5,7,11,13,17,19,23,29,31]
-# data = [x+3 for x in data]
-# print("updating the list...",data)
-# #output: updating the list... [5, 6, 8, 10, 14, 16, 20, 22, 26, 32, 34]
-# # Ex2: List comprehension: creating a different list with updated values
-# new_data = [x*3 for x in data]
-# print('creating new list...', new_data)
-# #output: creating new list... [15, 18, 24, 30, 42, 48, 60, 66, 78, 96, 102]
-# # Ex3: With an if-condition: Multiples of four:
-# fourx = [x for x in new_data if x%4 == 0]
-# print('divisible by 4...', fourx)
-# #output: divisible by 4... [24, 48, 60, 96]
-# # Ex4: Alternatively, we can update the list with the if condition as well
-# fourxsub = [x-1 for x in new_data if x%4==0]
-# print('divisible by four -1...',fourxsub)
-# #output: divisible by four -1... [23, 47, 59, 95]
-# # Ex5: Using range function:
-# nines = [x for x in range(100) if x%9 == 0]
-# print("multiples of nine...", nines)
-# #output: multiples of nine... [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99]
+#-------------------------LIST COMPREHENSION
+#Ex1: List comprehension: updating the same list
+data = [2,3,5,7,11,13,17,19,23,29,31]
+data = [x+3 for x in data]
+#print("updating the list...",data)
+#output: updating the list... [5, 6, 8, 10, 14, 16, 20, 22, 26, 32, 34]
+# Ex2: List comprehension: creating a different list with updated values
+new_data = [x*3 for x in data]
+print('creating new list...', new_data)
+#output: creating new list... [15, 18, 24, 30, 42, 48, 60, 66, 78, 96, 102]
+# Ex3: With an if-condition: Multiples of four:
+fourx = [x for x in new_data if x%4 == 0]
+print('divisible by 4...', fourx)
+#output: divisible by 4... [24, 48, 60, 96]
+# Ex4: Alternatively, we can update the list with the if condition as well
+fourxsub = [x-1 for x in new_data if x%4==0]
+print('divisible by four -1...',fourxsub)
+#output: divisible by four -1... [23, 47, 59, 95]
+# Ex5: Using range function:
+nines = [x for x in range(100) if x%9 == 0]
+print("multiples of nine...", nines)
+#output: multiples of nine... [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99]
 
 #-------------------------DICTIONARY COMPREHENSION
 #syntax dict = { key:value for key, value in <sequence> if <condition> } 
@@ -83,21 +83,21 @@
 #---------------SET COMPREHENSION
 # The set comprehension deals with the set data type and it's very similar to list comprehension.
 # The only key difference is the use of curly brackets for sets instead of square brackets as in lists. For example:
-set_a = {x for x in range(10,20) if x not in [12,14,16]}
-print("list of items between 10 to 20, except 12, 14, and 16....", set_a)
-#output list of items between 10 to 20, except 12, 14, and 16.... {10, 11, 13, 15, 17, 18, 19}
+# set_a = {x for x in range(10,20) if x not in [12,14,16]}
+# print("list of items between 10 to 20, except 12, 14, and 16....", set_a)
+# #output list of items between 10 to 20, except 12, 14, and 16.... {10, 11, 13, 15, 17, 18, 19}
 
 
 #--------------------GENERATOR COMPREHENSION
-#Generator comprehensions are also very similar to lists with the variation of using curved brackets 
-# instead of square brackets. They are also more memory efficient as compared to list comprehensions. For example:
-data = [2,3,5,7,11,13,17,19,23,29,31]
-gen_obj =(x for x in data)
-#print(gen_obj)#this returns an object
-#we have to iterate through to get the values
-for x in gen_obj:
-    print(x, end=" ")
-   #output:2 3 5 7 11 13 17 19 23 29 31
+# #Generator comprehensions are also very similar to lists with the variation of using curved brackets 
+# # instead of square brackets. They are also more memory efficient as compared to list comprehensions. For example:
+# data = [2,3,5,7,11,13,17,19,23,29,31]
+# gen_obj =(x for x in data)
+# #print(gen_obj)#this returns an object
+# #we have to iterate through to get the values
+# for x in gen_obj:
+#     print(x, end=" ")
+#    #output:2 3 5 7 11 13 17 19 23 29 31
 
 
 # #------------------Difference between map() and comprehension
