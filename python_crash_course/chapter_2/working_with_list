@@ -1,0 +1,26 @@
+#looping through a list
+magicians = ['alice', 'marvellous', 'miracle', 'julius', 'grace']
+
+for magician in magicians:
+    print(magician.title() + ", That was a great trick.")
+    print("I can't wait to see you next trick, " + magician.title()+".\n")
+    
+print("Thank you for your show!")
+
+print("\n\n-----------------exercise-----------------")
+soups = ['egusi','ogbono', 'ewedu', 'okro', 'banga']
+
+for soup in soups:
+    print("I love " + soup +" soup.")
+    
+print("I really love my swallow with soup")
+
+pets = ['cat', 'dog','parrot','duck','rabbit']
+
+for pet in pets:
+    print("\nA "+pet+" will make a great pet")
+    
+print("any of these animal will make a great pet")
+
+for value in range(1,10+1):
+    print(value)
