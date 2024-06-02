@@ -1,5 +1,5 @@
+from function_list import print_models, show_completed_models
 magicians = ["sam", "james", "jane", "jarvis", "daniel"]
-
 
 def show_magicians(magicians):
     """Print names of magicians from a list."""
@@ -20,6 +20,10 @@ def make_great(magicians_list):
     
     print(magicians_list)
 
-make_great(magicians)
-show_magicians(magicians)
-tr
+
+
+unprinted_designs = ["iphone case", "robot pendant", "dodecahedron"]
+completed_models = []
+
+print_models(unprinted_designs, completed_models)
+show_completed_models(completed_models)
