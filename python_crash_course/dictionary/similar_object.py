@@ -42,22 +42,6 @@ print("\n Peter's favorite number is: " + str(favorite_numbers["peter"]))
 print("\n Sandra's favorite number is: " + str(favorite_numbers["sandra"]))
 print("\n James's favorite number is: " + str(favorite_numbers["james"]))
 
-glossary = {
-    "list": "a collection of data",
-    "tuple": "a collection of whose content can't be altered ",
-    "conditional statement": "this are used to test a condition that evaluates \
-    to either true of false",
-    "method": "this a function that is related to a class.",
-    "parameters": "these are the values pass to a function",
-    "dictionary": "These a collection of data using a key-value pair",
-    "title": "This is a method for transforming a string to a title case",
-    "set": "This is a collection of data, that holds only one occurrence \
-    of a value",
-    "loop": "This is a programming feature, that helps run repetitive task",
-}
-
-for word, meaning in sorted(glossary.items()):
-    print("\n" + word + ": " + meaning)
 
 rivers = {
     "nile": "egypt",
