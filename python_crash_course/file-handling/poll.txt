@@ -1,0 +1,8 @@
+Frank Alimimian: 
+	Python
+	Python is a high level language that is so easy to get started with.
+
+Sarah Alimimian: 
+	Javascript
+	Its a frontend language that makes websites interactive and interest to deal with.
+
